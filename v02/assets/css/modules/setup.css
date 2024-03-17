@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --font-family: "Lato", sans-serif;
+    --font-size: 16px;
+    --background-color: #000000;
+    --color: #f8f8f8;
+    --orange: #f47521;
+    --nav-background: #23252b;
+    --nav-color: #dadada;
+    --nav-background-hover: #141519;
+    --nav-height: 60px;
+    --color-promo: #fab818;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 150vh;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--color);   
+    font-size: var(--font-size);
+}
+
+::selection {
+    background: #23252b;
+    color: var(--orange);
+}
+
+main {
+    padding-top: var(--nav-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}

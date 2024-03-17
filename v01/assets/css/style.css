@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --background-color: #000000;
+    --main-color: #f47521;
+    --nav-background: #23252b;
+    --nav-color: #dadada;
+    --title-color: #ffffff;
+    --hover-background: #141519;
+}
+
+::selection {
+    background: #23252b;
+    color: #f47521;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Lato", sans-serif;
+    color: var(--nav-color);
+    font-size: 16px;
+    min-height: 150vh;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ============================== HEADER ============================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 70px;
+    background-color: var(--nav-background);
+}
+
+header nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-left,
+header nav .nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header nav .nav-left .burger-menu {
+    display: none;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-left .logo {
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+header nav .nav-left .logo img {
+    width: auto;
+    height: 45%;
+}
+
+header nav .nav-left .logo .logo1 {
+    display: none;
+}
+
+header nav .nav-left .logo .logo2 {
+    display: block;
+}
+
+header nav .nav-left .nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-left .nav li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-left .nav li a {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-resp {
+    background-color: var(--hover-background);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.nav-resp li {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav-resp li a {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 15px 15px;
+    width: 100%;
+}
+
+header nav .nav-right .promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    position: relative;
+}
+
+header nav .nav-right .promo .text {
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+header nav .nav-right .promo i,
+header nav .nav-right .promo .text p:first-child {
+    color: #fab818;
+}
+
+header nav .nav-right .promo .pop-up {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    transform: translateX(-33%);
+    background-color: var(--nav-background);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    width: 400px;
+}
+
+header nav .nav-right .promo .pop-up::before {
+    content: '';
+    background-color: var(--nav-background);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -7.5px;
+    transform: rotate(45deg);
+}
+
+header nav .nav-right .promo .pop-up h3 {
+    font-size: 1.3rem;
+}
+
+header nav .nav-right .promo .pop-up p {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+header nav .nav-right a {
+    font-size: 1.3rem;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-left .burger-menu:hover,
+header nav .nav-left ul li a:hover,
+header nav .nav-right a:hover {
+    background-color: var(--hover-background);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================= MEDIA QUERIES ======================= */
+
+@media screen and (max-width:1023px) {
+
+    header {
+        padding: 0;
+    }
+
+    header nav .nav-left .burger-menu {
+        display: flex;
+    }
+    
+    header nav .nav-left .nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width:567px) {
+
+    header nav .nav-left .logo .logo1 {
+        display: block;
+    }
+    
+    header nav .nav-left .logo .logo2 {
+        display: none;
+    }
+
+    header nav .nav-right .promo .text {
+        display: none;
+    }
+
+    header nav .nav-right a:nth-child(3) {
+        display: none;
+    }
+}

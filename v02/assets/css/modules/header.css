@@ -1,0 +1,226 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: var(--nav-background);
+    padding: 0 5%;
+}
+
+header nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--nav-color);
+}
+
+header nav .nav-left {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-left .burger-menu {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 19px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+header nav .nav-left .burger-menu:hover {
+    background-color: var(--nav-background-hover);
+}
+
+header nav .nav-left .logo {
+    /* background-color: red; */
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-left .logo img {
+    width: auto;
+    height: calc(var(--nav-height) / 2.5);
+}
+
+header nav .nav-left .logo #logo {
+    display: none;
+}
+
+header nav .nav-left .logo #emblem {
+    display: block;
+}
+
+header nav .nav-left ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-left ul li {
+    height: 100%;
+}
+
+header nav .nav-left ul li a {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+header nav .nav-left ul li a:hover {
+    background-color: var(--nav-background-hover);
+}
+
+header nav .nav-right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header nav .nav-right a {
+    height: 100%;
+    padding: 0 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-right a i {
+    font-size: 1.3rem;
+}
+
+header nav .nav-right a:hover {
+    background-color: var(--nav-background-hover);
+}
+
+/* ===== PROMO ====== */
+header nav .nav-right #promo {
+    padding: 0 13px;
+    display: flex;
+    gap: .5rem;
+    position: relative;
+}
+
+header nav .nav-right #promo .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: .3rem;
+}
+
+header nav .nav-right #promo .text p {
+    font-size: .6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header nav .nav-right #promo .crown1,
+header nav .nav-right #promo .text p:first-child {
+    color: var(--color-promo);
+}
+
+header nav .nav-right #promo i {
+    font-size: 1.3rem;
+}
+
+/* POP-UP */
+#pop-up {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    padding-top: 10px;
+    width: 350px;
+}
+
+#pop-up .container {
+    background-color: #23252b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+#pop-up .container::after {
+    content: '';
+    background-color: #23252b;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: rotate(45deg);
+}
+
+#pop-up .container h3 {
+    text-align: center;
+    color: #fff;
+}
+
+#pop-up .container h3 .crown2 {
+    color: #fff;
+    font-size: .9em;
+}
+
+#pop-up .container p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+#promo:hover #pop-up {
+    display: block;
+}
+
+/* ======================= MEDIA QUERIES ======================= */
+
+@media screen and (max-width:1023px) {
+
+    header {
+        padding: 0;
+    }
+
+    header nav .nav-left .burger-menu {
+        display: flex;
+    }
+
+    header nav .nav-left ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width:567px) {
+
+    header nav .nav-left .logo #logo {
+        display: block;
+    }
+    
+    header nav .nav-left .logo #emblem {
+        display: none;
+    }
+
+    header nav .nav-right #promo .text {
+        display: none;
+    }
+
+    header nav .nav-right a:nth-child(3) {
+        display: none;
+    }
+}
